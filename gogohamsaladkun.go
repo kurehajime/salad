@@ -17,13 +17,13 @@ const BETTER_STR_LEN = 60 //どのくらいの長さの文章にしたいか(そ
 const RETRY = 13          //文章の長さを揃えるのに何回試行錯誤するか
 
 //マルコフ連鎖してランダムな文章を作る。
-type Hamalad struct {
+type Hamsalad struct {
 	dict map[string][]string //基本的に辞書は使い回し
 }
 
 //初期化
-func NewHamsalad() *Hamalad {
-	ham := Hamalad{}
+func NewHamsalad() *Hamsalad {
+	ham := Hamsalad{}
 	s := ham.readData()
 	t := kagome.NewTokenizer() //形態素解析
 	dict := make(map[string][]string)
@@ -66,7 +66,7 @@ func NewHamsalad() *Hamalad {
 }
 
 //辞書を元にマルコフ連鎖して文章を作る（内部用メソッド）。
-func (this *Hamalad) makeWord() string {
+func (this *Hamsalad) makeWord() string {
 	rtn := ""
 	rand.Seed(int64(time.Now().Nanosecond()))
 	now := this.dict["BOS"][rand.Intn(len(this.dict["BOS"]))]
@@ -84,7 +84,7 @@ func (this *Hamalad) makeWord() string {
 }
 
 //辞書を元にマルコフ連鎖して文章を作る。
-func (this *Hamalad) MakeWord() string {
+func (this *Hamsalad) MakeWord() string {
 	rtn := ""
 	line := ""
 	for i := 0; i <= RETRY; i++ {
@@ -97,7 +97,7 @@ func (this *Hamalad) MakeWord() string {
 }
 
 //カレントディレクトリの***.txtを全部読み込む
-func (this *Hamalad) readData() string {
+func (this *Hamsalad) readData() string {
 	s := ""
 	pwd, _ := filepath.Abs(".")
 	list, err := ioutil.ReadDir(pwd)

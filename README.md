@@ -3,13 +3,14 @@ gogohamsaladkun
 
 マルコフ連鎖でランダムに言葉を作り出すGoのプログラム。  
 形態素解析には[kagome](https://github.com/ikawaha/kagome)を使っています。  
-コンパイルするには
 
 ```
-go get github.com/ikawaha/kagome
+
+go get -u github.com/kurehajime/gogohamsaladkun
+
 ```
 
-でkagomeをインストールする必要があります。
+でビルドできます。
 
 ###使い方
 

@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	kagome "github.com/ikawaha/kagome"
+	"github.com/ikawaha/kagome/tokenizer"
 	"io/ioutil"
 	"math"
 	"math/rand"
@@ -20,12 +20,14 @@ const RETRY = 13          //文章の長さを揃えるのに何回試行錯誤�
 type Hamsalad struct {
 	dict map[string][]string //基本的に辞書は使い回し
 }
-
+func init() {
+	tokenizer.SysDic()
+}
 //初期化
 func NewHamsalad() *Hamsalad {
 	ham := Hamsalad{}
 	s := ham.readData()
-	t := kagome.NewTokenizer() //形態素解析
+	t := tokenizer.New()
 	dict := make(map[string][]string)
 	morphs := t.Tokenize(s)
 	now, next := "", ""

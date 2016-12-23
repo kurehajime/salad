@@ -1,4 +1,4 @@
-gogohamsaladkun
+salad
 ===============
 
 マルコフ連鎖でランダムに言葉を作り出すGoのプログラム。  
@@ -6,7 +6,7 @@ gogohamsaladkun
 
 ```
 
-go get -u github.com/kurehajime/gogohamsaladkun
+go get -u github.com/kurehajime/salad
 
 ```
 
@@ -14,20 +14,20 @@ go get -u github.com/kurehajime/gogohamsaladkun
 
 ###使い方
 
-gogohamsaladをコマンドラインで実行すると文章が自動生成されます。
+saladをコマンドラインで実行すると文章が自動生成されます。
 
 ```
 
-$./gogohamsalad
+$./salad dictionary.txt
 よく聞け、承認して済むことをもたらさない
 
 ```
 
-引数として数字を与えてやればN行の文章を作ります。
+-c引数として数字を与えてやればN行の文章を作ります。
 
 ```
 
-$./gogohamsalad 20
+$./gogohamsalad -c 20  dictionary.txt
 
 使わない真実だろうと決心してやらね
 さあ、人が愛し合えば、私の間にすぎない
@@ -52,5 +52,4 @@ $./gogohamsalad 20
 
 ```
 
-辞書は、実行ファイルと同じフォルダにある***.txtから作られます。  
-適当に弄って自分だけの文章生成器を作ってみてください。
+付属のdictionary.txtを適当に弄って自分だけの文章生成器を作ってみてください。

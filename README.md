@@ -27,7 +27,7 @@ $./salad dictionary.txt
 
 ```
 
-$./gogohamsalad -c 20  dictionary.txt
+$ gogohamsalad -c 20  dictionary.txt
 
 使わない真実だろうと決心してやらね
 さあ、人が愛し合えば、私の間にすぎない

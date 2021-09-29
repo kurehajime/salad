@@ -6,7 +6,7 @@ salad
 
 ```
 
-go get -u github.com/kurehajime/salad
+go install github.com/kurehajime/salad@latest
 
 ```
 
